@@ -1,0 +1,312 @@
+/* -----------------------------
+   colors used
+   -----------------------------
+    #000000
+    #020203
+    #4d84c4
+    #a51c30
+    #f5f5f8
+    #ebebeb
+    #ffffff
+    
+    You can see the color palette (minus the white and black) at: 
+    https://coolors.co/a51c30-4d84c4-020203-ebebeb-f5f5f8
+*/
+
+/* -----------------------------
+   fonts used
+   -----------------------------
+Note that Roboto and "Roboto Condensed" are available from the linked fonts already in the HTML
+
+font-family stack for most things:
+    Roboto, Arial, sans-serif;
+
+font-family stack for 'condensed' elements, such as hX headings, header navigation, and links in the 'Explore'  section:
+    'Roboto Condensed', Arial, sans-serif;
+   -----------------------------  */
+
+/* -----------------------------
+   background images used
+   -----------------------------
+../images/hes_shield_wordmark.svg   - This is the HES Shield and HES Wordmark
+../images/campus_bridge_river.jpg   - This is the background image for the 
+                                      "Explore" section
+../images/arrow-right.svg           - This is the crimson arrow next to the 
+                                      hypertext links in the "Explore" sections
+../images/mortar-board.svg          - The "cap" in Student Success stories 'program'
+../images/map-marker.svg            - The map marker in Student Success 
+                                      stories 'hometown'
+div.explore,
+div.studentsuccess,
+   -----------------------------  */
+
+body {
+    font-family: Roboto, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+   background-color: black;
+   color: white;
+   font-family: Roboto, Arial, sans-serif;
+   padding: 1rem;
+}
+
+footer nav.contactplus ul {
+   list-style: none;
+   font-weight: bold;
+   padding: 0;
+}
+
+footer nav.contactplus ul li {
+   display: inline;
+   padding-right: 1rem;
+   padding-bottom: 1rem;
+}
+
+footer nav.privacyplus ul {
+   list-style: none;
+   padding: 0;
+   margin: 0; 
+}
+
+footer nav.privacyplus ul li {
+   display: inline;
+   padding-right: 1rem; 
+}
+
+footer nav.privacyplus ul li::before {
+   content: "|"; 
+   margin-right: 1rem;
+}
+
+footer nav.privacyplus ul li:first-child::before {
+   content: ""; 
+   margin: 0;
+}
+
+footer a {
+   text-decoration: none;
+   color: inherit;
+}
+
+header h2{
+   background-color: #a51c30;
+   font-family: Roboto Condensed, Arial, sans-serif;
+   font-variant: small-caps;
+   color: white;
+   margin: 0; 
+   padding: 0.25rem;
+}
+
+header h2.wordmark{
+   background-color: white;
+   background-image: url(../images/hes_shield_wordmark.svg);
+   background-repeat: no-repeat;
+   height: 100px;
+   width: 260px;
+   padding: 0;
+}
+
+header nav.secondary{
+background-color: white;
+padding-bottom: 0.5rem;
+padding-top: 0.5rem;
+}
+
+
+
+header nav ul li{
+   display: inline;
+   padding: 0.5rem;
+   font-family: Roboto Condensed, Arial, sans-serif;
+}
+
+header nav.primary a,
+header nav.primary a:visited,
+header nav.primary a:hover,
+header nav.primary a:active{
+   color: black;
+   text-decoration: none;
+   font-weight: bold;
+}
+
+header nav.primary ul li::before{
+   content: "|"; 
+   padding-right: 1rem;
+}
+
+header nav.primary ul li:first-child::before,
+header nav.primary ul li:last-child::before {
+   content: ""; 
+   padding: 0;
+}
+
+header nav.primary,
+header nav.secondary {
+   display: flex;
+   justify-content: flex-end; /* Make sure both navs are flex containers */
+} 
+
+header nav.primary ul li.getinfo a{
+   background-color: #a51c30;
+   color: white;
+   font-weight: bolder;
+   padding: 1rem;
+}
+
+header nav.secondary a,
+header nav.secondary a:visited,
+header nav.secondary a:hover,
+header nav.secondary a:active{
+   color: #4d84c4;
+   text-decoration: none;
+   font-weight: bold;
+}
+
+header nav.secondary ul li.login a{
+   border-color: #4d84c4;
+   border-style: solid;
+   border-width: 3px;
+   font-weight: bolder;
+   padding-right: 1rem;
+   padding-left: 1rem;
+   padding-top: 0.2rem;
+   padding-bottom: 0.2rem;
+}
+
+div.header_flex{
+   display: flex;
+   justify-content: space-between;
+}
+
+div.nav_flex{
+   display: inline;
+}
+
+div.explore{
+   background-image: url(../images/campus_bridge_river.jpg);
+   background-repeat: no-repeat;
+}
+
+div.explore h1{
+   color: white;
+   font-family: Roboto, Arial, sans-serif;
+   text-align: center;
+   font-weight: bold;
+   font-size: 3rem;
+   padding: 1rem;
+   text-shadow: 2px 2px 4px black;
+}
+
+div.sections{
+   display: flex;
+   flex-wrap: wrap;
+   align-items: stretch;
+   justify-content: space-around;
+}
+
+div.sections section{
+   background-color: #ebebeb;
+   color: black;
+   flex-basis: 28%;
+   flex-grow: 0;
+   margin-top: 0;
+   margin-bottom: 30px;
+   border-top-width: 5px;
+   border-top-style: solid;
+   border-top-color: #a51c30;
+
+}
+
+div.sections section h2{
+   background-color: white;
+   text-transform: uppercase;
+   color: black;
+   padding: 0.5rem;
+   margin: 0;
+}
+
+div.sections ul{
+   list-style: none;
+   margin: 0; 
+   padding: 1rem;
+   background-color: #ebebeb;
+}
+
+div.sections section a{
+   background-image: url(../images/arrow-right.svg);
+   background-repeat: no-repeat;
+   background-position: right center;
+   padding-right: 25px;
+}
+
+div.sections section a,
+div.sections section a:visited,
+div.sections section a:hover,
+div.sections section a:active{
+   font-family: Roboto Condensed, Arial, sans-serif;
+   font-weight: bold;
+   color: #a51c30;
+   text-decoration: none;
+   line-height: 1.5;
+}
+
+div.studentsuccess{
+   background-color: #ebebeb;
+   margin: 0; 
+   padding: 0;
+}
+
+div.studentsuccess h2{
+   color: black;
+   font-family: Roboto, Arial, sans-serif;
+   font-weight: bold;
+   font-size: 2rem;
+   text-align: center;
+   padding-top: 2rem;
+   margin: 0;
+}
+
+div.studentsuccess p{
+   text-align: left;
+   padding: 2rem;
+   padding-left: 10rem;
+   padding-right: 10rem;
+} 
+
+div.articles{
+   display: flex;
+   align-items: stretch;
+   justify-content: space-around;
+}
+
+
+div.articles article{
+   flex-basis: 30%;
+   /* max-width: 25%; */
+   background-color: white;
+   margin: 1em;
+   padding: 1.5em;
+   flex-wrap: wrap;
+   box-sizing: border-box;
+} 
+
+div.articles article img{
+   width: 100%;
+   object-fit: cover;
+}
+
+div.articles article li.hometown{
+   list-style-image: url(../images/map-marker.svg);
+}
+
+div.articles article li.program{
+   list-style-image: url(../images/mortar-board.svg);
+}
+
+div.articles article p{
+   margin:0;
+   padding: 0;
+}
